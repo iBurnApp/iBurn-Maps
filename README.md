@@ -1,4 +1,4 @@
-iBurn-2013-map
+iBurn-Maps
 ==============
 
 TileMill Project maps for for iBurn app.
