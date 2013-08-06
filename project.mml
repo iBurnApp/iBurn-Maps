@@ -1,0 +1,142 @@
+{
+  "bounds": [
+    -119.2353,
+    40.7641,
+    -119.1763,
+    40.8079
+  ],
+  "center": [
+    -119.2063,
+    40.7856,
+    14
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 10,
+  "maxzoom": 19,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -119.22002936887641,
+        40.77504451906702,
+        -119.19074607937873,
+        40.797302745254456
+      ],
+      "id": "plazas",
+      "class": "",
+      "Datasource": {
+        "file": "layers/plazas/Plazas.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "plazas"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.27725,
+        40.73946,
+        -119.18545735995069,
+        40.80255349691675
+      ],
+      "id": "streets",
+      "class": "",
+      "Datasource": {
+        "file": "layers/streets/Streets.shp",
+        "id": "streets",
+        "project": "iburn2013",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "streets"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.28767,
+        40.74042,
+        -119.16759,
+        40.81739
+      ],
+      "id": "boundries",
+      "class": "",
+      "Datasource": {
+        "file": "layers/boundries/Boundries.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "boundries"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -119.22088759653026,
+        40.77439220172362,
+        -119.18850323734907,
+        40.799007141965674
+      ],
+      "id": "toilets",
+      "class": "",
+      "Datasource": {
+        "file": "layers/toilets/Toilets.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "toilets"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -119.27787,
+        40.75386,
+        -119.19566125029404,
+        40.79356639501926
+      ],
+      "id": "pois",
+      "class": "",
+      "Datasource": {
+        "file": "layers/pois/POIs.shp",
+        "id": "pois",
+        "project": "iburn2013",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "pois"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -119.27787,
+        40.75386,
+        -119.19566125029404,
+        40.79356639501926
+      ],
+      "id": "pois2",
+      "class": "",
+      "Datasource": {
+        "file": "layers/pois/POIs.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "pois2"
+    }
+  ],
+  "scale": 1,
+  "metatile": 4,
+  "name": "iburn2013",
+  "description": "iburn",
+  "attribution": ""
+}
