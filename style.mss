@@ -59,6 +59,9 @@ Map {
 #toilets [zoom > 14] {
  point-file: url(images/toilet.svg);
   point-transform:"scale(.2)";
+  [zoom >15]{
+    point-transform:"scale(.3)";
+  }
 }
 
 [zoom > 14]{
@@ -84,7 +87,10 @@ Map {
   point-file:url(images/clear.png);
   [Name = "The Man"]  {
     point-file: url(images/man.svg);
-  	point-transform:"scale(.04)";
+  	point-transform:"scale(.02)";
+    [zoom > 15]{
+      point-transform:"scale(.04)";
+    }
   }
   [Name = "Ranger HQ"] {
     point-file: url(images/ranger.png);
