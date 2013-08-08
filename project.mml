@@ -132,6 +132,24 @@
       "srs": "",
       "advanced": {},
       "name": "pois2"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.2254852464391,
+        40.76487015712925,
+        -119.1854573599507,
+        40.80255349691675
+      ],
+      "id": "streetsLabel",
+      "class": "",
+      "Datasource": {
+        "file": "layers/streets/Streets.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "streetsLabel"
     }
   ],
   "scale": 1,
