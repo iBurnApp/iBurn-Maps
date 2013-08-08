@@ -42,7 +42,7 @@ Map {
   line-width: 1;
 }
 
-#streets [zoom > 14] {
+#streetsLabel [zoom > 14] {
   ::labels {
   text-name: [Name];
   text-size: 16;
@@ -83,7 +83,7 @@ Map {
   point-allow-overlap:true;
   point-file:url(images/clear.png);
   [Name = "The Man"]  {
-    point-file: url(images/man.png);
+    point-file: url(images/man.svg);
   	point-transform:"scale(.04)";
   }
   [Name = "Ranger HQ"] {
