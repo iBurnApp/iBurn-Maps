@@ -67,16 +67,20 @@ Map {
 [zoom > 14]{
   point-allow-overlap:true;
   point-file:url(images/clear.png);
-  #pois2 [Name = "First Aid (Main)"][{
+  #pois2 [Name = "First Aid (Main)"]{
 	  point-file: url(images/firstaid.svg);
   	  point-transform:"scale(.2)"
   }
-   #pois2 [Name = "First Aid (3:00)"][{
-	  point-file: url(images/firstaid.svg);
+   #pois2 [Name = "First Aid (3:00)"]{
+    [zoom >= 17] {
+      point-file: url(images/firstaid.svg);
+    }
   	  point-transform:"scale(.2)"
   }
-   #pois2 [Name = "First Aid (9:00)"][{
-	  point-file: url(images/firstaid.svg);
+   #pois2 [Name = "First Aid (9:00)"]{
+	[zoom >= 17] {
+      point-file: url(images/firstaid.svg);
+    }
   	  point-transform:"scale(.2)"
   }
 }
@@ -93,15 +97,21 @@ Map {
     }
   }
   [Name = "Ranger HQ"] {
-    point-file: url(images/ranger.png);
+    point-file: url(images/ranger.svg);
     point-transform:"scale(.18)";
   }
   [Name = "Ranger Outpost (Berlin)"] {
-    point-file: url(images/ranger.png);
+    point-file: url(images/ranger.svg);
+    [zoom < 17] {
+      point-file: url(images/firstaid+ranger.svg);
+    }
     point-transform:"scale(.18)";
   }
   [Name = "Ranger Outpost (Tokyo)"] {
-    point-file: url(images/ranger.png);
+    point-file: url(images/ranger.svg);
+    [zoom < 17] {
+      point-file: url(images/firstaid+ranger.svg);
+    }
     point-transform:"scale(.18)";
   }
 }
