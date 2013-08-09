@@ -42,7 +42,7 @@ Map {
   line-width: 1;
 }
 
-#streets [zoom > 14] {
+#streetsLabel [zoom > 14] {
   ::labels {
   text-name: [Name];
   text-size: 16;
@@ -59,22 +59,32 @@ Map {
 #toilets [zoom > 14] {
  point-file: url(images/toilet.svg);
   point-transform:"scale(.2)";
+  [zoom >15]{
+    point-transform:"scale(.3)";
+  }
 }
 
 [zoom > 14]{
   point-allow-overlap:true;
   point-file:url(images/clear.png);
-  #pois2 [Name = "First Aid (Main)"][{
+  #pois2 [Name = "First Aid (Main)"]{
 	  point-file: url(images/firstaid.svg);
-  	  point-transform:"scale(.2)"
+  	  point-transform:"scale(.2)";
+      [zoom >15] {
+        point-transform:"scale(.3)";
+      }
   }
-   #pois2 [Name = "First Aid (3:00)"][{
-	  point-file: url(images/firstaid.svg);
-  	  point-transform:"scale(.2)"
+  #pois2 [Name = "First Aid (3:00)"]{
+    [zoom > 17] {
+      point-file: url(images/firstaid.svg);
+    }
+  	  point-transform:"scale(.3)"
   }
-   #pois2 [Name = "First Aid (9:00)"][{
-	  point-file: url(images/firstaid.svg);
-  	  point-transform:"scale(.2)"
+  #pois2 [Name = "First Aid (9:00)"]{
+	[zoom > 17] {
+    point-file: url(images/firstaid.svg);
+    }
+  	  point-transform:"scale(.3)"
   }
 }
 
@@ -83,20 +93,38 @@ Map {
   point-allow-overlap:true;
   point-file:url(images/clear.png);
   [Name = "The Man"]  {
-    point-file: url(images/man.png);
-  	point-transform:"scale(.04)";
+    point-file: url(images/man.svg);
+  	point-transform:"scale(.02)";
+    [zoom > 15]{
+      point-transform:"scale(.04)";
+    }
   }
   [Name = "Ranger HQ"] {
-    point-file: url(images/ranger.png);
+    point-file: url(images/ranger.svg);
     point-transform:"scale(.18)";
+    [zoom >15]{
+      point-transform:"scale(.3)";
+    }
   }
   [Name = "Ranger Outpost (Berlin)"] {
-    point-file: url(images/ranger.png);
+    point-file: url(images/ranger.svg);
+    [zoom <= 17] {
+      point-file: url(images/firstaid+ranger.svg);
+    }
     point-transform:"scale(.18)";
+    [zoom >15]{
+      point-transform:"scale(.3)";
+    }
   }
   [Name = "Ranger Outpost (Tokyo)"] {
-    point-file: url(images/ranger.png);
+    point-file: url(images/ranger.svg);
+    [zoom <= 17] {
+      point-file: url(images/firstaid+ranger.svg);
+    }
     point-transform:"scale(.18)";
+    [zoom >15]{
+      point-transform:"scale(.3)";
+    }
   }
 }
 
