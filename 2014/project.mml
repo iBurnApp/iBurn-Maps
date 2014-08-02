@@ -50,7 +50,7 @@
       "Datasource": {
         "file": "layers/streets/Streets.shp",
         "id": "streets",
-        "project": "iburn2013",
+        "project": "iburn",
         "srs": ""
       },
       "srs-name": "autodetect",
@@ -107,7 +107,7 @@
       "Datasource": {
         "file": "layers/pois/POIs.shp",
         "id": "pois",
-        "project": "iburn2013",
+        "project": "iburn",
         "srs": ""
       },
       "srs-name": "autodetect",
@@ -154,7 +154,7 @@
   ],
   "scale": 1,
   "metatile": 4,
-  "name": "iburn2013",
+  "name": "iburn",
   "description": "iburn",
   "attribution": ""
 }
