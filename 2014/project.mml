@@ -12,13 +12,31 @@
   ],
   "format": "png8",
   "interactivity": false,
-  "minzoom": 10,
+  "minzoom": 12,
   "maxzoom": 19,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss"
   ],
   "Layer": [
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.28661000001048,
+        40.742279999994594,
+        -119.16705427921252,
+        40.81833015311664
+      ],
+      "id": "boundaries",
+      "class": "",
+      "Datasource": {
+        "file": "layers/boundries/Boundries.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "boundaries"
+    },
     {
       "geometry": "polygon",
       "extent": [
@@ -40,10 +58,10 @@
     {
       "geometry": "linestring",
       "extent": [
-        -119.27725,
-        40.73946,
-        -119.18545735995069,
-        40.80255349691675
+        -119.22442524644524,
+        40.766730157117486,
+        -119.18439735995507,
+        40.80441349691978
       ],
       "id": "streets",
       "class": "",
@@ -53,44 +71,29 @@
         "project": "iburn",
         "srs": ""
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "streets"
     },
     {
-      "geometry": "linestring",
-      "extent": [
-        -119.28767,
-        40.74042,
-        -119.16759,
-        40.81739
-      ],
-      "id": "boundries",
-      "class": "",
-      "Datasource": {
-        "file": "layers/boundries/Boundries.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "boundries"
-    },
-    {
       "geometry": "point",
       "extent": [
-        -119.22088759653026,
-        40.77439220172362,
-        -119.18850323734907,
-        40.799007141965674
+        -119.21982759655008,
+        40.77625220175968,
+        -119.18744323734819,
+        40.800867141970244
       ],
       "id": "toilets",
       "class": "",
       "Datasource": {
-        "file": "layers/toilets/Toilets.shp"
+        "file": "layers/toilets/Toilets.shp",
+        "id": "toilets",
+        "project": "iBurn-2014-Github",
+        "srs": ""
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "toilets"
     },
@@ -107,7 +110,7 @@
       "Datasource": {
         "file": "layers/pois/POIs.shp",
         "id": "pois",
-        "project": "iburn",
+        "project": "iBurn-2014",
         "srs": ""
       },
       "srs-name": "autodetect",
@@ -126,7 +129,10 @@
       "id": "pois2",
       "class": "",
       "Datasource": {
-        "file": "layers/pois/POIs.shp"
+        "file": "layers/pois/POIs.shp",
+        "id": "pois2",
+        "project": "iBurn-2014",
+        "srs": ""
       },
       "srs-name": "autodetect",
       "srs": "",
@@ -136,23 +142,23 @@
     {
       "geometry": "linestring",
       "extent": [
-        -119.2254852464391,
-        40.76487015712925,
-        -119.1854573599507,
-        40.80255349691675
+        -119.22442524645,
+        40.76673015712,
+        -119.18439735996002,
+        40.80441349692
       ],
       "id": "streetsLabel",
       "class": "",
       "Datasource": {
         "file": "layers/streets/Streets.shp"
       },
-      "srs-name": "autodetect",
-      "srs": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
       "advanced": {},
       "name": "streetsLabel"
     }
   ],
-  "scale": 1,
+  "scale": 2,
   "metatile": 4,
   "name": "iburn",
   "description": "iburn",

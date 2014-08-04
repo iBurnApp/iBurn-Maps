@@ -1,95 +1,124 @@
+//Color and Font Palette
+@background: #E8E0D8;
+  //#A7A1AF;
+@plaza-color: #FFA851;
+@sans_bold: "Open Sans Bold","DejaVu Sans Bold","unifont Medium";
+@sans: "Tahoma Regular";
+  //"Open Sans Semibold","DejaVu Sans Book","unifont Medium";
+//@tahoma: "Tahoma Small Cap Bold";
+@toilets: #168;
+@streets_fill: #D9CCBE;
+@streets_halo: #B2993D;
+@streets_halo_text: #F2DBA0;
+@streets_text_color: #3F3F3F;
+  //yellow
+  //#F2DBA0;
+@fence: #AC1A20;
+
+  
+  //#FDFB37;
+
 Map {
-  //background-color: white;
+  background-color: @background;
 }
-
-#boundries[Name="Fence"] {
-  line-width:.5;
-  line-color:#9C9C9C;
-}
-
-
-#art {
+ 
+#boundaries[Name="Fence"] { 
   line-width:1;
-  line-color:#168;
+  line-color:@fence;
 }
 
 #plazas {
-  line-color:#594;
-  line-width:0.5;
+  line-color:#DF8337;
+  line-width:2;
   polygon-opacity:1;
-  polygon-fill:#ae8;
+  polygon-fill:@plaza-color;
+  
 }
 
-#streets [zoom > 14] {
-  ::outline {
-    line-color:#000;
-    line-width:6;
+#streets {
+  [zoom < 14] {
+    line-color:@streets_halo;
+    line-width:1;
+  } 
+  [zoom >= 14] {
+    ::outline {
+      line-color:@streets_fill;
+      line-width:3;
+    }
+    line-color:@streets_halo;
+    line-width: 5;
+  } 
+  [zoom > 16] {
+    ::outline {
+      line-color:@streets_fill;
+      line-width:5;
+    }
+    line-color:@streets_halo;
+    line-width: 7;
   }
-  line-color:#FFF;
-  line-width: 3;
-}
-
-#streets [zoom > 16] {
-   ::outline {
-    line-width:10;
+  [zoom > 18] {
+    ::outline {
+      line-color:@streets_fill;
+      line-width:7;
+    }
+    line-color:@streets_halo;
+    line-width: 9;
   }
-  line-color:#FFF;
-  line-width: 6;
+  
 }
-
-#streets [zoom < 15] {
-  line-color:black;
-  line-width: 1;
-}
-
+ 
 #streetsLabel [zoom > 14] {
   ::labels {
   text-name: [Name];
-  text-size: 16;
-  text-face-name: "Skia Regular";
+  text-size: 9;
+  text-face-name: @sans;
+      //"Tahoma Small Cap Bold";
   text-placement: line;
-  text-halo-fill: white;
+  text-halo-fill: @streets_halo_text;
   text-halo-radius: 2px;
-  text-fill: black;
+  text-fill: @streets_text_color;
   text-allow-overlap:false;
   text-min-padding: 10;
+  text-transform: uppercase;
+  text-character-spacing: 3;
     }
 }
 
-#toilets [zoom > 14] {
- point-file: url(images/toilet.svg);
-  point-transform:"scale(.2)";
-  [zoom >15]{
-    point-transform:"scale(.3)";
-  }
+#toilets [zoom > 13] {
+  marker-file: url(maki/toilets-24.svg);
+  marker-fill: @toilets;
+  marker-transform:"scale(0.75)";
 }
 
 [zoom > 14]{
-  point-allow-overlap:true;
-  point-file:url(images/clear.png);
+  marker-allow-overlap:true;
+  marker-file:url(images/clear.png);
   #pois2 [Name = "First Aid (Main)"]{
-	  point-file: url(images/firstaid.svg);
-  	  point-transform:"scale(.2)";
+      marker-fill: red;
+	  marker-file: url(maki/hospital-24.svg);
+  	  marker-transform:"scale(1.5)";
       [zoom >15] {
-        point-transform:"scale(.3)";
+        point-transform:"scale(1.5)";
       }
   }
   #pois2 [Name = "First Aid (3:00)"]{
     [zoom > 17] {
-      point-file: url(images/firstaid.svg);
+      marker-file: url(maki/hospital-24.svg);
+      marker-fill: red;
     }
-  	  point-transform:"scale(.3)"
+  	  point-transform:"scale(1.5)"
   }
   #pois2 [Name = "First Aid (9:00)"]{
 	[zoom > 17] {
-    point-file: url(images/firstaid.svg);
+      marker-file: url(maki/hospital-24.svg);
+      marker-fill: red;
     }
-  	  point-transform:"scale(.3)"
+  	  marker-transform:"scale(1.5)"
   }
 }
 
 
-#pois [zoom > 14]{
+#pois [zoom > 13]{
   point-allow-overlap:true;
   point-file:url(images/clear.png);
   [Name = "The Man"]  {
@@ -126,6 +155,11 @@ Map {
       point-transform:"scale(.3)";
     }
   }
+  [Name = "Center Camp"] [zoom > 15] {
+    marker-file: url(maki/cafe-24.svg);
+    marker-transform:"scale(1.4)";
+    marker-fill: #803C15;
+    }
 }
 
 
