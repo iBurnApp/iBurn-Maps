@@ -211,8 +211,32 @@ Map {
     marker-file: url(maki/airport-24.svg);
     marker-allow-overlap: true;
    	} 
+  
+  [Name = "Arctica Ice Sales"] [zoom > 14] {
+    point-file: url(images/igloo3.svg);
+    point-transform:"scale(.25)";
+    [zoom >15]{
+      point-transform:"scale(.35)";
+    } 
+  }
+  
+  [Name = "Arctica 3 Ice Cubed"] [zoom > 14] {
+    point-file: url(images/igloo3.svg);
+    point-transform:"scale(.20)";
+    [zoom >15]{
+      point-transform:"scale(.30)";
+    } 
+  }
+  
+  [Name = "Arctica9 Ice Sales"] [zoom > 14] {
+    point-file: url(images/igloo3.svg);
+    point-transform:"scale(.20)";
+    [zoom >17]{
+      point-transform:"scale(.30)";
+    } 
+  }
  
-}
+} 
 
 #pois [zoom < 13] {
    [Name = "Black Rock City"] {
