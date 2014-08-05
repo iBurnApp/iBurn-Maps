@@ -143,6 +143,14 @@ Map {
     } 
   }
   
+  [Name = "Ranger Outpost Moscow"] {
+    point-file: url(images/ranger.svg);
+    point-transform:"scale(.18)";
+    [zoom >15]{
+      point-transform:"scale(.3)";
+    } 
+  }
+  
   [Name = "Ranger Outpost (Berlin)"] {
     point-file: url(images/firstaid+ranger.svg);
     [zoom <= 17] {
@@ -177,10 +185,14 @@ Map {
     }
   
   [Name = "The Temple"] [zoom > 12] {
+    //::outline {
+	//marker-width: 100px;
+    //marker-fill: red;
+    //  }  
     marker-file: url(images/temple2.svg); 
     marker-fill: @plaza_color;
     marker-allow-overlap: true;
-    marker-transform:"scale(0.3)";
+    marker-transform:"scale(0.25)"; 
     }
   
   [Name = "Playa Info"] [zoom = 16] { 
