@@ -161,9 +161,13 @@ Map {
     marker-transform:"scale(1.4)";
     marker-fill: #803C15;
     }
-  [Name = "The Temple"] {
-    marker-file: url(maki/triangle-24.svg);
-    marker-fill: black;
+  [Name = "The Temple"] [zoom > 12] {
+    marker-file: url(images/temple.png);
+    marker-transform:"scale(1.2)";
+    marker-line-color: yellow;
+    marker-fill: @plaza-color;
+  //  marker-placement: point;
+    marker-allow-overlap: true;
     }
 }
 
