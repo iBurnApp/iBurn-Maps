@@ -39,6 +39,10 @@ Map {
 }
 
 #streets {
+  [zoom < 13] {
+    line-color:@streets_halo;
+    line-width:0.5;
+  } 
   [zoom < 14] {
     line-color:@streets_halo;
     line-width:1;
@@ -161,14 +165,14 @@ Map {
    
   [Name = "Center Camp"] [zoom > 14] {
     marker-file: url(maki/cafe-24.svg);
-    marker-transform:"scale(1.3)";
+    marker-transform:"scale(1.1)";
     marker-fill: #803C15;
     marker-allow-overlap: true;
     }
    
   [Name = "Post Office"] [zoom > 14] {
     marker-file: url(maki/post-24.svg);
-    marker-transform:"scale(1.3)";
+    marker-transform:"scale(1.1)";
     marker-allow-overlap: true;
     }
   
@@ -200,8 +204,8 @@ Map {
 
 #pois [zoom < 13] {
    [Name = "Black Rock City"] {
-    marker-width:3;
-    marker-fill:black;
+    //marker-width:3;
+    //marker-fill:black;
     text-dx:30px;
     text-dy:-10px;
    	text-name:"[Name]";
