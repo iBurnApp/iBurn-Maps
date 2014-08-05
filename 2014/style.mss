@@ -114,7 +114,7 @@ Map {
  
 
 
-#pois [zoom > 13] {
+#pois [zoom > 12] {
   point-allow-overlap:true;
   point-file:url(images/clear.png);
   [Name = "The Man"]{
@@ -190,7 +190,30 @@ Map {
     marker-file: url(images/info2.svg);
     marker-allow-overlap: true;
    	} 
+  
+  [Name = "Port of Entry"] {
+    marker-file: url(maki/airport-24.svg);
+    marker-allow-overlap: true;
+   	} 
  
 }
+
+#pois [zoom < 13] {
+   [Name = "Black Rock City"] {
+    marker-width:3;
+    marker-fill:black;
+    text-dx:30px;
+    text-dy:-10px;
+   	text-name:"[Name]";
+    text-face-name: @sans;
+    text-character-spacing:2;
+    text-transform: uppercase;
+    text-size:15;
+    text-halo-fill: @streets_halo_text;
+  	text-halo-radius: 3px;
+  	text-fill: @streets_text_color;
+   	} 
+}
+ 
 
 
