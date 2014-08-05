@@ -22,9 +22,10 @@
 
 Map {
   background-color: @background;
+  buffer-size: 256;
 }
  
-#boundaries[Name="Fence"] { 
+#boundaries [Name="Fence"] { 
   line-width:1;
   line-color:@fence;
 }
@@ -91,43 +92,45 @@ Map {
   	marker-fill: @toilets;
   	marker-transform:"scale(0.75)";
 }
-
-	[zoom > 14]{
-  	marker-allow-overlap:true;
-  	marker-file:url(images/clear.png);}
+ 
   
-#pois2 [Name = "First Aid (Main)"]{
-    [zoom > 14] {
-      marker-fill: red;
-	  marker-file: url(maki/hospital-24.svg);
-      marker-allow-overlap:true;
+#pois [Name = "First Aid (Main)"]{
+    [zoom = 14] {
+	  point-file: url(images/firstaid.svg);
+      point-allow-overlap:true;
+      point-transform:"scale(0.18)";
+  }
+    [zoom = 15] {
+	  point-file: url(images/firstaid.svg);
+      point-allow-overlap:true;
+      point-transform:"scale(0.2)";
+  }
+    [zoom >= 16] {
+	  point-file: url(images/firstaid.svg);
+      point-allow-overlap:true;
+      point-transform:"scale(0.35)";
   }
 }
-  
-#pois2 [Name = "First Aid (3:00)"]{
-    [zoom > 14] {
-      marker-file: url(maki/hospital-24.svg);
-      marker-fill: red;
-   }
-}
-#pois2 [Name = "First Aid (9:00)"]{
-	[zoom > 14] {
-      marker-file: url(maki/hospital-24.svg);
-      marker-fill: red;
-    }
-}
+ 
 
 
 #pois [zoom > 13]{
   point-allow-overlap:true;
   point-file:url(images/clear.png);
-  [Name = "The Man"]  {
+  [Name = "The Man"]{
+   [zoom < 15]  {
     point-file: url(images/man.svg);
-  	point-transform:"scale(.02)";
-    [zoom > 15]{
+  	point-transform:"scale(.01)";}
+   [zoom = 15]{
+      point-transform:"scale(.02)";
+      point-file: url(images/man.svg);
+    }
+   [zoom >= 16]{
       point-transform:"scale(.04)";
+      point-file: url(images/man.svg);
     }
   }
+  
   [Name = "Ranger HQ"] {
     point-file: url(images/ranger.svg);
     point-transform:"scale(.18)";
@@ -135,31 +138,33 @@ Map {
       point-transform:"scale(.3)";
     } 
   }
+  
   [Name = "Ranger Outpost (Berlin)"] {
-    point-file: url(images/ranger.svg);
+    point-file: url(images/firstaid+ranger.svg);
     [zoom <= 17] {
-      point-file: url(images/ranger.svg); 
+      point-transform:"scale(.18)"; 
     }
-    point-transform:"scale(.18)";
-    [zoom >15]{ 
+    [zoom > 17]{ 
       point-transform:"scale(.3)";
     }
   }
+  
   [Name = "Ranger Outpost (Tokyo)"] {
-    point-file: url(images/ranger.svg);
+    point-file: url(images/firstaid+ranger.svg);
     [zoom <= 17] {
-      point-file: url(images/ranger.svg);
-    }
     point-transform:"scale(.18)";
-    [zoom >15]{
-      point-transform:"scale(.3)";
-    }
+      }
+    [zoom > 15]{
+    point-transform:"scale(.3)";
+      }
   }
+  
   [Name = "Center Camp"] [zoom > 15] {
     marker-file: url(maki/cafe-24.svg);
     marker-transform:"scale(1.4)";
     marker-fill: #803C15;
     }
+  
   [Name = "The Temple"] [zoom > 12] {
     marker-file: url(images/temple2.svg); 
     marker-fill: @plaza_color;

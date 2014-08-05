@@ -98,6 +98,24 @@
       "name": "toilets"
     },
     {
+      "geometry": "linestring",
+      "extent": [
+        -119.22442524645,
+        40.76673015712,
+        -119.18439735996002,
+        40.80441349692
+      ],
+      "id": "streetsLabel",
+      "class": "",
+      "Datasource": {
+        "file": "layers/streets/Streets.shp"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "streetsLabel"
+    },
+    {
       "geometry": "point",
       "extent": [
         -119.27680999999956,
@@ -117,45 +135,6 @@
       "srs": "",
       "advanced": {},
       "name": "pois"
-    },
-    {
-      "geometry": "point",
-      "extent": [
-        -119.27787,
-        40.75386,
-        -119.19566125029404,
-        40.79356639501926
-      ],
-      "id": "pois2",
-      "class": "",
-      "Datasource": {
-        "file": "layers/pois/POIs.shp",
-        "id": "pois2",
-        "project": "iBurn-2014",
-        "srs": ""
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "pois2"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        -119.22442524645,
-        40.76673015712,
-        -119.18439735996002,
-        40.80441349692
-      ],
-      "id": "streetsLabel",
-      "class": "",
-      "Datasource": {
-        "file": "layers/streets/Streets.shp"
-      },
-      "srs-name": "WGS84",
-      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "advanced": {},
-      "name": "streetsLabel"
     }
   ],
   "scale": 2,
