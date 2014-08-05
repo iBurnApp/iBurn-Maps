@@ -114,7 +114,7 @@ Map {
  
 
 
-#pois [zoom > 13]{
+#pois [zoom > 13] {
   point-allow-overlap:true;
   point-file:url(images/clear.png);
   [Name = "The Man"]{
@@ -158,11 +158,18 @@ Map {
     point-transform:"scale(.3)";
       }
   }
-  
-  [Name = "Center Camp"] [zoom > 15] {
+   
+  [Name = "Center Camp"] [zoom > 14] {
     marker-file: url(maki/cafe-24.svg);
-    marker-transform:"scale(1.4)";
+    marker-transform:"scale(1.3)";
     marker-fill: #803C15;
+    marker-allow-overlap: true;
+    }
+   
+  [Name = "Post Office"] [zoom > 14] {
+    marker-file: url(maki/post-24.svg);
+    marker-transform:"scale(1.3)";
+    marker-allow-overlap: true;
     }
   
   [Name = "The Temple"] [zoom > 12] {
@@ -171,6 +178,19 @@ Map {
     marker-allow-overlap: true;
     marker-transform:"scale(0.3)";
     }
+  
+  [Name = "Playa Info"] [zoom = 16] { 
+    marker-transform:"scale(0.3)";
+    marker-file: url(images/info2.svg);
+    marker-allow-overlap: true;
+   	}
+  
+  [Name = "Playa Info"] [zoom >= 17] {
+    marker-transform:"scale(0.5)";
+    marker-file: url(images/info2.svg);
+    marker-allow-overlap: true;
+   	} 
+ 
 }
 
 
