@@ -100,17 +100,17 @@
     {
       "geometry": "point",
       "extent": [
-        -119.27787,
-        40.75386,
-        -119.19566125029404,
-        40.79356639501926
+        -119.27680999999956,
+        40.755720000003244,
+        -119.1946012502967,
+        40.79542639502038
       ],
       "id": "pois",
       "class": "",
       "Datasource": {
         "file": "layers/pois/POIs.shp",
         "id": "pois",
-        "project": "iBurn-2014",
+        "project": "iBurn-2014-Github",
         "srs": ""
       },
       "srs-name": "autodetect",

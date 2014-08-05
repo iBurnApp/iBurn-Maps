@@ -6,7 +6,8 @@
 @sans: "Tahoma Regular";
   //"Open Sans Semibold","DejaVu Sans Book","unifont Medium";
 //@tahoma: "Tahoma Small Cap Bold";
-@toilets: #168;
+@toilets:#00AFD4;
+  //#168;
 @streets_fill: #D9CCBE;
 @streets_halo: #B2993D;
 @streets_halo_text: #F2DBA0;
@@ -159,6 +160,10 @@ Map {
     marker-file: url(maki/cafe-24.svg);
     marker-transform:"scale(1.4)";
     marker-fill: #803C15;
+    }
+  [Name = "The Temple"] {
+    marker-file: url(maki/triangle-24.svg);
+    marker-fill: black;
     }
 }
 
