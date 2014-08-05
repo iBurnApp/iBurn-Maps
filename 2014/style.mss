@@ -1,7 +1,8 @@
 //Color and Font Palette
 @background: #E8E0D8;
   //#A7A1AF;
-@plaza-color: #FFA851;
+@plaza_color: #FFA851;
+@plaza_line: #DF8337;
 @sans_bold: "Open Sans Bold","DejaVu Sans Bold","unifont Medium";
 @sans: "Tahoma Regular";
   //"Open Sans Semibold","DejaVu Sans Book","unifont Medium";
@@ -10,7 +11,7 @@
   //#168;
 @streets_fill: #D9CCBE;
 @streets_halo: #B2993D;
-@streets_halo_text: #F2DBA0;
+@streets_halo_text: #F2DBA0; 
 @streets_text_color: #3F3F3F;
   //yellow
   //#F2DBA0;
@@ -29,10 +30,10 @@ Map {
 }
 
 #plazas {
-  line-color:#DF8337;
-  line-width:2;
+  line-color: @plaza_line;
+  line-width:3;
   polygon-opacity:1;
-  polygon-fill:@plaza-color;
+  polygon-fill:@plaza_color;
   
 }
 
@@ -86,36 +87,34 @@ Map {
 }
 
 #toilets [zoom > 13] {
-  marker-file: url(maki/toilets-24.svg);
-  marker-fill: @toilets;
-  marker-transform:"scale(0.75)";
+  	marker-file: url(maki/toilets-24.svg);
+  	marker-fill: @toilets;
+  	marker-transform:"scale(0.75)";
 }
 
-[zoom > 14]{
-  marker-allow-overlap:true;
-  marker-file:url(images/clear.png);
-  #pois2 [Name = "First Aid (Main)"]{
+	[zoom > 14]{
+  	marker-allow-overlap:true;
+  	marker-file:url(images/clear.png);}
+  
+#pois2 [Name = "First Aid (Main)"]{
+    [zoom > 14] {
       marker-fill: red;
 	  marker-file: url(maki/hospital-24.svg);
-  	  marker-transform:"scale(1.5)";
-      [zoom >15] {
-        point-transform:"scale(1.5)";
-      }
+      marker-allow-overlap:true;
   }
-  #pois2 [Name = "First Aid (3:00)"]{
-    [zoom > 17] {
+}
+  
+#pois2 [Name = "First Aid (3:00)"]{
+    [zoom > 14] {
+      marker-file: url(maki/hospital-24.svg);
+      marker-fill: red;
+   }
+}
+#pois2 [Name = "First Aid (9:00)"]{
+	[zoom > 14] {
       marker-file: url(maki/hospital-24.svg);
       marker-fill: red;
     }
-  	  point-transform:"scale(1.5)"
-  }
-  #pois2 [Name = "First Aid (9:00)"]{
-	[zoom > 17] {
-      marker-file: url(maki/hospital-24.svg);
-      marker-fill: red;
-    }
-  	  marker-transform:"scale(1.5)"
-  }
 }
 
 
@@ -134,22 +133,22 @@ Map {
     point-transform:"scale(.18)";
     [zoom >15]{
       point-transform:"scale(.3)";
-    }
+    } 
   }
   [Name = "Ranger Outpost (Berlin)"] {
     point-file: url(images/ranger.svg);
     [zoom <= 17] {
-      point-file: url(images/firstaid+ranger.svg);
+      point-file: url(images/ranger.svg); 
     }
     point-transform:"scale(.18)";
-    [zoom >15]{
+    [zoom >15]{ 
       point-transform:"scale(.3)";
     }
   }
   [Name = "Ranger Outpost (Tokyo)"] {
     point-file: url(images/ranger.svg);
     [zoom <= 17] {
-      point-file: url(images/firstaid+ranger.svg);
+      point-file: url(images/ranger.svg);
     }
     point-transform:"scale(.18)";
     [zoom >15]{
@@ -162,12 +161,10 @@ Map {
     marker-fill: #803C15;
     }
   [Name = "The Temple"] [zoom > 12] {
-    marker-file: url(images/temple.png);
-    marker-transform:"scale(1.2)";
-    marker-line-color: yellow;
-    marker-fill: @plaza-color;
-  //  marker-placement: point;
+    marker-file: url(images/temple2.svg); 
+    marker-fill: @plaza_color;
     marker-allow-overlap: true;
+    marker-transform:"scale(0.3)";
     }
 }
 
