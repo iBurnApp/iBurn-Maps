@@ -5,7 +5,10 @@
 }
  
 //First Aid Stations, there are three, the main one is larger   
-#pois [Name = "First Aid (Main)"]{
+#pois [Name = "First Aid (Main)"] [zoom > 12] {
+    point-allow-overlap:true;
+    point-file: url(images/firstaid.svg);
+    point-transform:"scale(.18)";
     [zoom = 14] {
 	  point-file: url(images/firstaid.svg);
       point-allow-overlap:true;
@@ -59,8 +62,27 @@
   }
 }
  
-//Ranger outposts, there are three and a main one
-#pois [Name = "Ranger Outpost (Berlin)"], [Name = "Ranger Outpost Moscow"]
+//Ranger outposts, there are three and the main one is larger
+#pois [Name = "Ranger Outpost (Berlin)"]
+	  {
+    [zoom = 14] {
+	  point-file: url(images/ranger.svg);
+      point-allow-overlap:true;
+      point-transform:"scale(0.09)";
+  }
+    [zoom = 15] {
+	  point-file: url(images/ranger.svg);
+      point-allow-overlap:true;
+      point-transform:"scale(0.15)";
+  }
+    [zoom >= 16] {
+	  point-file: url(images/ranger.svg);
+      point-allow-overlap:true;
+      point-transform:"scale(0.20)";
+  }
+}
+
+#pois [Name = "Ranger Outpost Moscow"]
 	  {
     [zoom = 14] {
 	  point-file: url(images/ranger.svg);
@@ -106,11 +128,12 @@
     } 
   }
 
-
+//Other POIs like center camp POIs
 #pois [zoom > 12] {
   point-allow-overlap:true;
   point-file:url(images/clear.png);
-  [Name = "The Man"]{
+  
+  [Name = "The Man"] {
    [zoom < 15]  {
     point-file: url(images/man.svg);
   	point-transform:"scale(.01)";}
@@ -148,7 +171,7 @@
     marker-transform:"scale(0.25)"; 
     }
   
-  [Name = "Playa Info"] [zoom = 16] { 
+  [Name = "Playa Info"] [zoom > 14] { 
     marker-transform:"scale(0.3)";
     marker-file: url(images/info2.svg);
     marker-allow-overlap: true;
