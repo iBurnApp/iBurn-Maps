@@ -69,7 +69,7 @@
       "Datasource": {
         "file": "layers/streets/Streets.shp",
         "id": "streets",
-        "project": "iburn",
+        "project": "iBurn-2014-Github",
         "srs": ""
       },
       "srs-name": "WGS84",
