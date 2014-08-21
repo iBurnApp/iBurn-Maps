@@ -82,7 +82,7 @@
   }
 }
 
-#pois [Name = "Ranger Outpost Moscow"]
+#pois [Name = "Ranger Outpost (Tokyo)"]
 	  {
     [zoom = 14] {
 	  point-file: url(images/ranger.svg);
