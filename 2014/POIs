@@ -160,17 +160,6 @@
     marker-allow-overlap: true;
     }
   
-  [Name = "The Temple"] [zoom > 12] {
-    //::outline {
-	//marker-width: 100px;
-    //marker-fill: red;
-    //  }  
-    marker-file: url(images/temple2.svg); 
-    marker-fill: @plaza_color;
-    marker-allow-overlap: true;
-    marker-transform:"scale(0.25)"; 
-    }
-  
   [Name = "Playa Info"] [zoom > 14] { 
     marker-transform:"scale(0.3)";
     marker-file: url(images/info2.svg);
@@ -210,9 +199,40 @@
     [zoom >17]{
       point-transform:"scale(.30)";
     } 
-  }
+  } 
  
 } 
+
+#pois [Name = "The Temple"] {
+  [zoom < 15] [zoom > 12] {
+    ::outline {
+	marker-file:  url(images/templeoutline.svg);
+    marker-fill: white;
+    marker-allow-overlap:true;
+    marker-transform:"scale(0.15)"; 
+      }  
+    ::fill {
+    marker-file: url(images/temple2.svg); 
+    marker-fill: @plaza_color;
+    marker-allow-overlap: true;
+    marker-transform:"scale(0.14)"; 
+    }
+  }
+  [zoom >= 15] {
+    ::outline {
+	marker-file:  url(images/templeoutline.svg);
+    marker-fill: white;
+    marker-allow-overlap:true;
+    marker-transform:"scale(0.28)"; 
+      }  
+    ::fill {
+    marker-file: url(images/temple2.svg); 
+    marker-fill: @plaza_color;
+    marker-allow-overlap: true;
+    marker-transform:"scale(0.25)"; 
+    }
+   }
+ } 
 
 #pois [zoom < 13] {
    [Name = "Black Rock City"] {
