@@ -30,35 +30,35 @@ Map {
 
 #streets {
   [zoom < 13] {
-    line-color:@streets_halo;
+    polygon-fill:@streets_halo;
     line-width:0.5;
   } 
   [zoom < 14] {
-    line-color:@streets_halo;
+    polygon-fill:@streets_halo;
     line-width:1;
   } 
   [zoom >= 14] {
     ::outline {
-      line-color:@streets_fill;
+      polygon-fill:@streets_fill;
       line-width:3;
     }
-    line-color:@streets_halo;
+    polygon-fill:@streets_halo;
     line-width: 5;
   } 
   [zoom > 16] {
     ::outline {
-      line-color:@streets_fill;
+      polygon-fill:@streets_fill;
       line-width:5;
     }
-    line-color:@streets_halo;
+    polygon-fill:@streets_halo;
     line-width: 7;
   }
   [zoom > 18] {
     ::outline {
-      line-color:@streets_fill;
+      polygon-fill:@streets_fill;
       line-width:7;
     }
-    line-color:@streets_halo;
+    polygon-fill:@streets_halo;
     line-width: 9;
   }
   
