@@ -16,7 +16,8 @@
   "maxzoom": 19,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
-    "style.mss"
+    "style.mss",
+    "POIs.mss"
   ],
   "Layer": [
     {
@@ -99,6 +100,49 @@
       "srs": "",
       "advanced": {},
       "name": "fence"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.235483,
+        40.754783,
+        -119.188467,
+        40.768217
+      ],
+      "id": "airport",
+      "class": "",
+      "Datasource": {
+        "file": "layers/airport.json",
+        "layer": "OGRGeoJSON"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "airport"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -119.27786999999998,
+        40.75386,
+        -119.19023099999998,
+        40.798766
+      ],
+      "id": "pois",
+      "class": "",
+      "Datasource": {
+        "file": "layers/points.json",
+        "layer": "OGRGeoJSON",
+        "id": "pois",
+        "project": "2015",
+        "srs": ""
+      },
+      "layer": "OGRGeoJSON",
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "pois"
     }
   ],
   "scale": 2,
