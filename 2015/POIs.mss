@@ -5,19 +5,28 @@
 } 
  
 
-//Ranger outposts, there are three and the main one is larger
-#pois [name = "Ranger Outpost (Berlin)"]
-	  {
+//RANGER outposts, there are three and the main one is larger
+#pois [name = "Ranger Outpost (Berlin)"] {
+  	[zoom = 15]{
+      point-transform:"translate(-10, 2), scale(0.15)";
+      point-allow-overlap:true;
+      point-file: url(images/ranger.svg);
+    }
     [zoom >= 16] {
+      point-transform:"translate(15, -5), scale(0.2)";
       point-transform:"scale(0.20)";
       point-file: url(images/ranger.svg);
   }
 }
 
-#pois [name = "Ranger Outpost (Tokyo)"]
-	  {
+#pois [name = "Ranger Outpost (Tokyo)"] {
+	[zoom = 15]{
+      point-transform:"translate(-10, 2), scale(0.15)";
+      point-allow-overlap:true;
+      point-file: url(images/ranger.svg);
+    }
     [zoom >= 16] {
-      point-transform:"scale(0.20)";
+      point-transform:"translate(-15, 5), scale(0.20)";
       point-file: url(images/ranger.svg);
   }
 }
@@ -44,7 +53,7 @@
   }
     [zoom >= 16] {
       point-file: url(images/firstaid.svg);
-      point-transform:"scale(0.20)";
+      point-transform:"translate(5, -10), scale(0.20)";
   }
 }
 
@@ -68,8 +77,8 @@
 #pois [name = "First Aid (3:00)"] {
     [zoom = 14] {
      point-file: url(images/firstaid.svg);
+     point-transform:"scale(.09)";
      point-allow-overlap:true;
-     point-transform:"scale(0.09)";
   }
     [zoom = 15] {
       point-file: url(images/firstaid.svg);
@@ -77,23 +86,7 @@
   }
     [zoom >= 16] {
       point-file: url(images/firstaid.svg);
-      point-transform:"scale(0.20)";
-  }
-}
-
-#pois [name = "First Aid (9:00)"] {
-    [zoom = 14] {
-      point-file: url(images/firstaid.svg);
-      point-allow-overlap:true;
-      point-transform:"scale(0.09)";
-  }
-    [zoom = 15] {
-      point-transform:"scale(0.15)";
-      point-file: url(images/firstaid.svg);
-  }
-    [zoom >= 16] {
-      point-transform:"scale(0.20)";
-      point-file: url(images/firstaid.svg);
+      point-transform:"translate(-5, 10), scale(0.2)";
   }
 }
 
@@ -187,12 +180,7 @@
     marker-transform:"scale(0.5)";
     marker-file: url(images/info2.svg);
     marker-allow-overlap: true;
-   	} 
-  
-  [name = "Port of Entry"] {
-    marker-file: url(maki/airport-24.svg);
-    marker-allow-overlap: true;
-   	} 
+   	}  
   
   [ref = "ice"] [zoom > 14] {
     point-file: url(images/igloo3.svg);

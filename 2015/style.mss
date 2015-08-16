@@ -64,7 +64,21 @@ Map {
 
 #airport {
   line-width:1;
-  line-color:#168;
+  line-color: @streets_fill2;
+  marker-file: url(maki/airport-24.svg);
+  marker-allow-overlap: true;
+  marker-transform:"rotate(69), scale(0.7)";
+  text-size: 10;
+  text-face-name: @sans;
+      //"Tahoma Small Cap Bold";
+  text-placement: line;
+  text-halo-fill: @streets_fill_light;
+  text-halo-radius: 2px;
+  text-fill: @streets_text_color;
+  text-name: "'AIRPORT RUNWAY'";
+  text-min-padding: 10;
+  text-character-spacing: 3;
+  text-placement: line;
 }
 
 
