@@ -192,19 +192,19 @@
  
 } 
 
-#pois [name = "The Temple"] {
+#pois [ref = "temple"] {
   [zoom < 15] [zoom > 12] {
     ::outline {
 	marker-file:  url(images/templeoutline.svg);
     marker-fill: white;
     marker-allow-overlap:true;
-    marker-transform:"scale(0.15)"; 
+    marker-transform:"scale(0.13)"; 
       }  
     ::fill {
     marker-file: url(images/temple2.svg); 
     marker-fill: @plaza_color;
     marker-allow-overlap: true;
-    marker-transform:"scale(0.14)"; 
+    marker-transform:"scale(0.11)"; 
     }
   }
   [zoom >= 15] {
@@ -212,13 +212,13 @@
 	marker-file:  url(images/templeoutline.svg);
     marker-fill: white;
     marker-allow-overlap:true;
-    marker-transform:"scale(0.28)"; 
+    marker-transform:"scale(0.25)"; 
       }  
     ::fill {
     marker-file: url(images/temple2.svg); 
     marker-fill: @plaza_color;
     marker-allow-overlap: true;
-    marker-transform:"scale(0.25)"; 
+    marker-transform:"scale(0.22)"; 
     }
    }
  } 

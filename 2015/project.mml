@@ -32,7 +32,10 @@
       "class": "",
       "Datasource": {
         "file": "layers/outline/outline.json",
-        "layer": "OGRGeoJSON"
+        "layer": "OGRGeoJSON",
+        "id": "outline",
+        "project": "2015",
+        "srs": ""
       },
       "layer": null,
       "srs-name": "autodetect",
