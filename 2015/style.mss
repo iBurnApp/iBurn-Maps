@@ -1,18 +1,13 @@
 //Color and Font Palette
 @background: #E8E0D8;
-@plaza_color: #FFA851;
-@plaza_line: #DF8337;
 @sans: "Tahoma Regular";
-@toilets:#00AFD4;
 @streets_fill_light: #EBDED1;
 @streets_fill: #D9CCBE;
 @streets_fill2: #C3B8AB;
-@streets_halo: #B2993D;
-@streets_halo_text: #F2DBA0; 
+@cafe_brown: #803C15;
 @streets_text_color: #3F3F3F;
-@streets_text_color2: #FFFFFF;
-@fence: #AC1A20;
-@fence2: #AC1A20;
+@temple_color: #FFA851;
+@toilets:#00AFD4;
 
 Map {
   background-color: @background;
@@ -24,15 +19,7 @@ Map {
   line-color:@streets_fill;
 }
 
-#plazas {
-  line-color: @plaza_line;
-  line-width:3;
-  polygon-opacity:1;
-  polygon-fill:@plaza_color;
-  
-}
-
- #outline {
+#outline {
   polygon-fill:@streets_fill2;
 }
  
@@ -55,37 +42,29 @@ Map {
 
 #layout {
   marker-width:6;
-  marker-fill:#f45;
-  marker-line-color:#813;
+  marker-fill:@temple_color;
   marker-allow-overlap:true;
   marker-ignore-placement:true;
 }
 
 
-#airport {
+#airport [zoom > 13] {
   line-width:1;
   line-color: @streets_fill2;
   marker-file: url(maki/airport-24.svg);
   marker-allow-overlap: true;
-  marker-transform:"rotate(69), scale(0.7)";
-  text-size: 10;
+  marker-transform:"rotate(249), scale(0.7)";
+  [zoom > 14] {
+  text-size: 8;
   text-face-name: @sans;
       //"Tahoma Small Cap Bold";
   text-placement: line;
   text-halo-fill: @streets_fill_light;
   text-halo-radius: 2px;
   text-fill: @streets_text_color;
-  text-name: "'AIRPORT RUNWAY'";
+  text-name: "'RUNWAY ' + [ref]";
   text-min-padding: 10;
   text-character-spacing: 3;
   text-placement: line;
-}
-
-
-#points {
-  marker-width:6;
-  marker-fill:#f45;
-  marker-line-color:#813;
-  marker-allow-overlap:true;
-  marker-ignore-placement:true;
+  }
 }

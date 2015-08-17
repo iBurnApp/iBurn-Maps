@@ -1,7 +1,8 @@
-#pois [ref = "toilet"][zoom > 13] {
+#pois [ref = "toilet"] [zoom > 13] {
   	marker-file: url(maki/toilets-24.svg);
   	marker-fill: @toilets;
-  	marker-transform:"scale(0.75)";
+  	marker-transform:"scale(0.75), translate(-20, -20)";
+  	marker-ignore-placement:true;
 } 
  
 
@@ -41,22 +42,6 @@
     } 
   }
 
-#pois [name = "First Aid (9:00)"] {
-    [zoom = 14] {
-	  point-file: url(images/firstaid.svg);
-      point-allow-overlap:true;
-      point-transform:"scale(0.09)";
-  }
-    [zoom = 15] {
-      point-file: url(images/firstaid.svg);
-      point-transform:"scale(0.15)";
-  }
-    [zoom >= 16] {
-      point-file: url(images/firstaid.svg);
-      point-transform:"translate(5, -10), scale(0.20)";
-  }
-}
-
 //First Aid Stations, there are three, the main one is larger   
 #pois [name = "First Aid (Main)"] [zoom > 12] {
     [zoom = 14] {
@@ -73,6 +58,22 @@
       point-transform:"scale(0.35)";
   }
 }
+
+#pois [name = "First Aid (9:00)"] {
+    [zoom = 14] {
+	  point-file: url(images/firstaid.svg);
+      point-allow-overlap:true;
+      point-transform:"scale(0.09)";
+  }
+    [zoom = 15] {
+      point-file: url(images/firstaid.svg);
+      point-transform:"scale(0.15)";
+  }
+    [zoom >= 16] {
+      point-file: url(images/firstaid.svg);
+      point-transform:"translate(5, -10), scale(0.20)";
+  }
+} 
 
 #pois [name = "First Aid (3:00)"] {
     [zoom = 14] {
@@ -160,7 +161,7 @@
   [name = "Center Camp"] [zoom > 14] {
     marker-file: url(maki/cafe-24.svg);
     marker-transform:"scale(1.1)";
-    marker-fill: #803C15;
+    marker-fill: @cafe_brown;
     marker-allow-overlap: true;
     }
    
@@ -202,7 +203,7 @@
       }  
     ::fill {
     marker-file: url(images/temple2.svg); 
-    marker-fill: @plaza_color;
+    marker-fill: @temple_color;
     marker-allow-overlap: true;
     marker-transform:"scale(0.11)"; 
     }
@@ -216,7 +217,7 @@
       }  
     ::fill {
     marker-file: url(images/temple2.svg); 
-    marker-fill: @plaza_color;
+    marker-fill: @temple_color;
     marker-allow-overlap: true;
     marker-transform:"scale(0.22)"; 
     }

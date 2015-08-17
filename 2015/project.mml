@@ -1,9 +1,9 @@
 {
   "bounds": [
-    -119.2544,
-    40.7528,
-    -119.1606,
-    40.8186
+    -119.3575,
+    40.691,
+    -119.0461,
+    40.8823
   ],
   "center": [
     -119.206,
@@ -55,7 +55,10 @@
       "class": "",
       "Datasource": {
         "file": "layers/streets/streets.json",
-        "layer": "OGRGeoJSON"
+        "layer": "OGRGeoJSON",
+        "id": "streets",
+        "project": "2015",
+        "srs": ""
       },
       "layer": null,
       "srs-name": "autodetect",
@@ -96,7 +99,10 @@
       "class": "",
       "Datasource": {
         "file": "layers/fence/fence.json",
-        "layer": "OGRGeoJSON"
+        "layer": "OGRGeoJSON",
+        "id": "fence",
+        "project": "2015",
+        "srs": ""
       },
       "layer": null,
       "srs-name": "autodetect",
@@ -116,7 +122,10 @@
       "class": "",
       "Datasource": {
         "file": "layers/airport.json",
-        "layer": "OGRGeoJSON"
+        "layer": "OGRGeoJSON",
+        "id": "airport",
+        "project": "2015",
+        "srs": ""
       },
       "layer": null,
       "srs-name": "autodetect",
@@ -149,7 +158,7 @@
     }
   ],
   "scale": 2,
-  "metatile": 2,
+  "metatile": 4,
   "name": "",
   "description": "",
   "attribution": ""
