@@ -1,9 +1,9 @@
 {
   "bounds": [
-    -119.3575,
-    40.691,
-    -119.0461,
-    40.8823
+    -119.267,
+    40.7413,
+    -119.1465,
+    40.8365
   ],
   "center": [
     -119.206,
@@ -132,6 +132,29 @@
       "srs": "",
       "advanced": {},
       "name": "airport"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -119.2065,
+        40.79991894120167,
+        -119.1988254516952,
+        40.8015811065234
+      ],
+      "id": "dmz",
+      "class": "",
+      "Datasource": {
+        "file": "layers/dmz.json",
+        "layer": "OGRGeoJSON",
+        "id": "dmz",
+        "project": "2015",
+        "srs": ""
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "dmz"
     },
     {
       "geometry": "point",

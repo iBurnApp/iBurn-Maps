@@ -48,13 +48,13 @@ Map {
 }
 
 
-#airport [zoom > 13] {
+#airport [zoom > 11] {
   line-width:1;
   line-color: @streets_fill2;
+  [zoom > 13] {
   marker-file: url(maki/airport-24.svg);
   marker-allow-overlap: true;
   marker-transform:"rotate(249), scale(0.7)";
-  [zoom > 14] {
   text-size: 8;
   text-face-name: @sans;
       //"Tahoma Small Cap Bold";
@@ -67,4 +67,22 @@ Map {
   text-character-spacing: 3;
   text-placement: line;
   }
+}
+
+
+#dmz [zoom > 14] {
+  polygon-opacity:1;
+  polygon-fill:darken(@background, 15%);
+  text-size: 8;
+  text-face-name: @sans;
+      //"Tahoma Small Cap Bold";
+  text-halo-fill: @streets_fill_light;
+  text-halo-radius: 2px;
+  text-fill: @streets_text_color;
+  text-name: "'D M Z '";
+  text-character-spacing: 4;
+  text-orientation: -12;
+  text-dy: -0.5;
+  marker-file: url(maki/music-12.svg);
+  marker-transform:"translate(-28, -4)";
 }
