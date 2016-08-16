@@ -1,0 +1,208 @@
+{
+  "bounds": [
+    -119.267,
+    40.7413,
+    -119.1465,
+    40.8365
+  ],
+  "center": [
+    -119.206,
+    40.7856,
+    12
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 12,
+  "maxzoom": 19,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "POIs.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -119.2267499521487,
+        40.76421930850393,
+        -119.1869393417329,
+        40.801224428394654
+      ],
+      "id": "outline",
+      "class": "",
+      "Datasource": {
+        "file": "layers/outline/outline.geojson",
+        "layer": "OGRGeoJSON",
+        "id": "outline",
+        "project": "2015",
+        "srs": ""
+      },
+      "layer": "OGRGeoJSON",
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "outline"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -119.22401771012126,
+        40.77313644976217,
+        -119.19006488304994,
+        40.79884434376378
+      ],
+      "id": "toilets",
+      "class": "",
+      "Datasource": {
+        "file": "layers/toilets.geojson",
+        "layer": "OGRGeoJSON"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "toilets"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.2266950926994,
+        40.76427398689269,
+        -119.18699420074574,
+        40.80116958088212
+      ],
+      "id": "streets",
+      "class": "",
+      "Datasource": {
+        "file": "layers/streets/streets.geojson",
+        "layer": "OGRGeoJSON",
+        "id": "streets",
+        "project": "2016",
+        "srs": ""
+      },
+      "layer": "OGRGeoJSON",
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "streets"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -119.2065,
+        40.7864,
+        -119.2065,
+        40.7864
+      ],
+      "id": "layout",
+      "class": "",
+      "Datasource": {
+        "file": "layers/layout/layout.json",
+        "layer": "center"
+      },
+      "layer": "center",
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "layout",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.23572109025976,
+        40.76427398689269,
+        -119.18014191873675,
+        40.80635930232809
+      ],
+      "id": "fence",
+      "class": "",
+      "Datasource": {
+        "file": "layers/fence/fence.geojson",
+        "layer": "OGRGeoJSON",
+        "id": "fence",
+        "project": "2015",
+        "srs": ""
+      },
+      "layer": "OGRGeoJSON",
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "fence"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.235483,
+        40.754783,
+        -119.188467,
+        40.768217
+      ],
+      "id": "airport",
+      "class": "",
+      "Datasource": {
+        "file": "layers/airport.geojson",
+        "layer": "OGRGeoJSON",
+        "id": "airport",
+        "project": "2015",
+        "srs": ""
+      },
+      "layer": "OGRGeoJSON",
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "airport"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -119.2065,
+        40.79991894120167,
+        -119.1988254516952,
+        40.8015811065234
+      ],
+      "id": "dmz",
+      "class": "",
+      "Datasource": {
+        "file": "layers/dmz.geojson",
+        "layer": "OGRGeoJSON",
+        "id": "dmz",
+        "project": "2015",
+        "srs": ""
+      },
+      "layer": "OGRGeoJSON",
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "dmz"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -119.27786999999998,
+        40.75386,
+        -119.1947,
+        40.7949
+      ],
+      "id": "pois",
+      "class": "",
+      "Datasource": {
+        "file": "layers/points.geojson",
+        "layer": "OGRGeoJSON",
+        "id": "pois",
+        "project": "2015",
+        "srs": ""
+      },
+      "layer": "OGRGeoJSON",
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "pois"
+    }
+  ],
+  "scale": 2,
+  "metatile": 4,
+  "name": "",
+  "description": "",
+  "attribution": ""
+}
