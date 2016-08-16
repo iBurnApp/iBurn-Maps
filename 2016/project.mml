@@ -174,7 +174,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "dmz"
+      "name": "dmz",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -198,6 +199,26 @@
       "srs": "",
       "advanced": {},
       "name": "pois"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -119.27715963733,
+        40.74411142434,
+        -119.22341622643,
+        40.77357708063
+      ],
+      "id": "entrance-road",
+      "class": "",
+      "Datasource": {
+        "file": "layers/entrance_road.geojson",
+        "layer": "OGRGeoJSON"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "entrance-road"
     }
   ],
   "scale": 2,

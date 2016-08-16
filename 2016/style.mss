@@ -22,6 +22,27 @@ Map {
 #outline {
   polygon-fill:@streets_fill2;
 }
+
+#entrance-road [zoom > 10] {
+  line-width: 1;
+  line-color:@streets_fill2;
+  
+  [zoom > 13] {
+  	line-width: 3;
+  }
+
+  [zoom > 15] {
+  	line-width: 5;
+  }
+  
+  [zoom > 16] {
+  	line-width: 18;
+  }
+  
+  [zoom > 17] {
+  	line-width: 16;
+  }
+}
  
 #streets {
   ::labels [zoom > 14] {
