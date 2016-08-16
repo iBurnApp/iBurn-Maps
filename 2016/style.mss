@@ -8,6 +8,7 @@
 @streets_text_color: #3F3F3F;
 @temple_color: #FFA851;
 @toilets:#00AFD4;
+@recycle:#0AB636;
 
 Map {
   background-color: @background;

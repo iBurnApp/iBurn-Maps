@@ -176,8 +176,31 @@
    
   [name = "Post Office"] [zoom > 14] {
     marker-file: url(maki/post-24.svg);
+   	marker-transform:"scale(1.1)";
+    marker-allow-overlap: true;
+    }
+  
+  [ref = "bus"] [zoom > 14] {
+    marker-file: url(maki/bus-18.svg);
     marker-transform:"scale(1.1)";
     marker-allow-overlap: true;
+    [zoom > 15] {
+      text-name: [name];
+      text-size: 8;
+      text-face-name: @sans;
+      text-placement: point;
+      text-dy: -13;
+      text-halo-fill: @streets_fill_light;
+      text-halo-radius: 2px;
+      text-character-spacing: 2;
+    }
+  }
+  
+  [ref = "recycle"] [zoom > 14] {
+    marker-file: url(images/recycle.svg);
+    marker-transform:"scale(0.2)";
+    marker-allow-overlap: true;
+    marker-fill:@recycle;
     }
   
   [name = "Playa Info"] [zoom > 14] { 

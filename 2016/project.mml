@@ -191,7 +191,7 @@
         "file": "layers/points.geojson",
         "layer": "OGRGeoJSON",
         "id": "pois",
-        "project": "2015",
+        "project": "2016",
         "srs": ""
       },
       "layer": "OGRGeoJSON",
