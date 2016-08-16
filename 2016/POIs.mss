@@ -13,6 +13,9 @@
   	//marker-ignore-placement:true;
   	marker-placement: interior;
   	marker-clip: false;
+  	[zoom = 17] {
+    	marker-transform:"scale(0.75)";
+    }
 } 
 
 //RANGER outposts, there are three and the main one is larger
