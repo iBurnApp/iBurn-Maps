@@ -1,0 +1,116 @@
+{
+    "version": 8,
+    "name": "iburn",
+    "metadata": {
+        "mapbox:autocomposite": false,
+        "mapbox:type": "template",
+        "mapbox:trackposition": true
+    },
+    "center": [
+        -119.21499805594704,
+        40.79314244900874
+    ],
+    "zoom": 17.65190577153357,
+    "bearing": 0,
+    "pitch": 3.5,
+    "sources": {
+        "composite": {
+            "url": "mapbox://dchiles.0o5ocawe",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/dchiles/cj3nxjqli000u2soyeb947f7s",
+    "glyphs": "mapbox://fonts/dchiles/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "#E8E0D8"
+            }
+        },
+        {
+            "id": "toilets-outline",
+            "type": "fill",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "toilets",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#00AFD4"
+            }
+        },
+        {
+            "id": "fence",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "fence",
+            "layout": {
+                "visibility": "visible",
+                "line-join": "bevel"
+            },
+            "paint": {
+                "line-color": "#D9CCBE",
+                "line-width": 2
+            }
+        },
+        {
+            "id": "outline",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "outline",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#C3B8AB"
+            }
+        },
+        {
+            "id": "streets",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "streets",
+            "filter": [
+                "in",
+                "$type",
+                "LineString",
+                "Point",
+                "Polygon"
+            ],
+            "layout": {
+                "text-field": "{name}",
+                "symbol-placement": "line",
+                "text-size": 14
+            },
+            "paint": {
+                "text-halo-color": "#EBDED1",
+                "text-halo-width": 2,
+                "text-color": "#3F3F3F",
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "points",
+            "type": "symbol",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "points",
+            "layout": {
+                "icon-image": "{ref}",
+                "icon-allow-overlap": true,
+                "icon-ignore-placement": true,
+                "icon-size": 1
+            },
+            "paint": {}
+        }
+    ],
+    "created": "2017-06-08T04:35:35.281Z",
+    "id": "cj3nxjqli000u2soyeb947f7s",
+    "modified": "2017-08-03T02:51:05.822Z",
+    "owner": "dchiles",
+    "visibility": "private",
+    "draft": false
+}
